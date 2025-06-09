@@ -1,0 +1,17 @@
+
+syntax = "proto3"
+
+package email;
+
+service Email{
+    rpc SendEmail(EmailRequest) returns (EmailResponse)
+}
+
+message EmailRequest{
+    string name = 1
+    string email = 2
+}
+
+message EmailResponse {
+    string status = 1
+}
